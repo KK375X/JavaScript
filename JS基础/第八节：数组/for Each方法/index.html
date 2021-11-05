@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - for Each()方法：遍历数组的方法
+                - IE8及以下不支持
+         */
+        // 创建一个数组
+        var arr = ["孙悟空", "猪八戒", "沙和尚", "唐僧", "白龙马"];
+
+
+        /*
+            - for Each()方法需要一个函数作为参数
+                - 像这种函数，由我们创建但是不由我们调用的，我们称为回调函数
+                - 数组中有几个函数就会执行几次。每次执行时，浏览器会将遍历到的元素以实参的形式传递进来
+                - 浏览器会在回调函数中传递了三个函数
+                    - 第一个参数就是正在遍历的参数
+                    - 第二个参数就是正在遍历元素的索引
+                    - 第三个参数就是正在遍历的数组
+         */
+        // 回调函数
+        arr.forEach(function (value, index, object) {
+            console.log(value);
+            console.log(index);
+            console.log(object);
+        })
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

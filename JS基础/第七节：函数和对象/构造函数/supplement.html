@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>supplement</title>
+
+    <script type="text/javascript">
+        /*
+            - 使所有同类型的对象使用同一个方法
+         */
+        // 构造一个函数
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.sayName = fun(name);
+        }
+
+        // 定义共享方法，防止内存空间浪费
+        function fun(name) {
+            document.write("Hello，大家好，我是" + name + "。<br/>");
+        }
+
+        // 调用构造函数
+        var per1 = new Person("孙悟空", 18, "男");
+        var per2 = new Person("猪八戒", 19, "男");
+        var per3 = new Person("沙和尚", 20, "男");
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

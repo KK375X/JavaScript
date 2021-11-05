@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - 使用工厂批量创建对象
+         */
+        // 利用函数创建局部对象
+        function createPerson(name, age, gender) {
+            // 创建局部对象
+            var obj = {
+                name:name,
+                age:age,
+                gender:gender,
+                sayName:function () {
+                    console.log(this.name);
+                }
+            };
+
+            // 将局部对象返回，使其变成全局对象
+            return obj;
+        }
+
+        // 调用函数，获得新对象
+        var new_obj1 = createPerson("孙悟空", 18, "男");
+        var new_obj2 = createPerson("猪八戒", 19, "男");
+        var new_obj3 = createPerson("沙和尚", 20, "男");
+
+        // 在控制台打印新对象的信息
+        console.log(new_obj1);
+        console.log(new_obj2);
+        console.log(new_obj3);
+
+
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>

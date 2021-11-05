@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#outer{
+    width: 500px;
+    margin: 50px auto;
+    background-color: #99ff99;
+    padding: 10px;
+    text-align: center;
+}
+
+img{
+    width: 500px;
+}
+

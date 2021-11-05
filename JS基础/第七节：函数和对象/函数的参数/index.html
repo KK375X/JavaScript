@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - 定义一个用来求两个数和的函数
+                - 可以在函数的()中指定一个或多个形参（形式参数）
+
+         */
+        function  sum(a, b) {
+            console.log(a+b);
+        }
+
+        /*
+            - 在调用函数时，可以在()中指定实参（实际参数）
+                - 不会检查实参的类型
+         */
+        sum(1, 1);
+
+
+        /*
+            - 当我们的参数过多时，可以将参数封装到一个对象中，然后通过对象传递
+         */
+        // 创建函数
+        function print(obj) {
+            document.write("我是"+obj.name+"，我"+obj.age+"了，我是"+obj.gender+"生，我住在"+"花果山");
+        }
+
+        // 创建一个对象
+        var obj = {
+            name:"孙悟空",
+            age:18,
+            gender:"男",
+            address:"花果山"
+        };
+
+        // 调用对象
+        print(obj);
+
+        
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

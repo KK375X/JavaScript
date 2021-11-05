@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - 当我们直接在页面中打印一个对象时，事件上是输出的对象的toString()方法的返回值
+
+            - 可以为原型对象添加一个toString()方法，方便统一的管理
+         */
+        // 构造一个函数
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+
+        // 创建一个实例
+        var per1 = new Person("孙悟空", 18, "男");
+        var per2 = new Person("猪八戒", 19, "男");
+        var per3 = new Person("沙和尚", 20, "男");
+
+        // 如果我们希望在输出对象时不输出[object object]，可以为原型对象添加一个toString()方法
+        Person.prototype.toString = function () {
+            return ("Person[name="+this.name+",age="+this.age+",gender="+this.gender+"]");
+        };
+
+        var result1 = per1.toString();
+        var result2 = per2.toString();
+        var result3 = per3.toString();
+
+        // 打印
+        console.log("result1 =" + result1);
+        console.log("result2 =" + result2);
+        console.log("result3 =" + result3);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

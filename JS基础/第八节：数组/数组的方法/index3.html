@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index3</title>
+
+    <script type="text/javascript">
+        // 创建一个数组
+        var arr = ["孙悟空", "猪八戒", "沙和尚", "唐僧", "白龙马"];
+        var arr2 = ["牛魔王", "铁扇公主", "红孩儿"];
+
+
+        /*
+            - concat()
+                - 连接两个或多个数组（也可以是单个的元素），并将新数组返回
+                - 该方法不会对原数组产生印象
+         */
+        var result = arr.concat(arr2);
+        console.log(result);
+
+
+        /*
+            - join()
+                - 该方法可以将数组转换成字符串，默认用 , 连接起来了
+                - 该方法不会对原数组产生影响
+                - 在join()中可以指定一个字符串作为参数，这个字符串将会成为数组中元素的连接符
+         */
+        result = arr.join("+++");
+        console.log(result);
+
+
+        /*
+            - reverse()
+                - 该方法用来翻转数组
+                - 该方法会直接修改原数组
+         */
+         arr.reverse();
+         console.log(arr);
+
+
+        /*
+            - sort()
+                - 可以对数组的元素进行排序
+                - 会影响原数组
+                - 默认Unicode编码排序
+                    - 即使对于纯数字的数组，使用sort()排序时，也会按照Unicode编码
+                      来排序，所以对数字讲排序时，可能会得到错误的结果
+                - 可以在sort()中添加回调函数来指定排序规则
+                    - 回调函数中需要定义两个形参，使用哪个不确定，但第一个形参的值
+                      一定在第二个形参的值前边
+                    - 浏览器会根据回调函数的返回值来决定元素的顺序
+                        - 如果返回一个大于0的值，则元素会交换位置
+                        - 如果返回一个小于等于0的值，则元素位置不变
+         */
+        var arr3 = [5, 2, 9, 4, 1, 0, 4, 6, 3];
+        arr3.sort(function (a, b) {
+            return (a - b);     // 升序排列
+            return (b - a);     // 降序排列
+        });
+        console.log(arr3);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

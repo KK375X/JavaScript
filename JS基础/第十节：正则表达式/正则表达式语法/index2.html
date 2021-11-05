@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index2</title>
+
+    <script type="text/javascript">
+        /*
+            - 检查一个字符串中是否含有 .
+                - .：可以匹配任意字符
+                - 在正则表达式中使用 \ 作为转义字符
+                    - \.：表示 .
+                    - \\：表示 \
+
+            - 注意：
+                - 使用构造函数时，由于它的参数是一个字符串，而 \ 是字符串中转义字符
+        */
+        var reg = /\./;
+        console.log(reg.test("abc.bca"));
+
+        reg = /\\/;
+        console.log(reg.test("abc\\bca"));
+
+
+        /*
+            - \w：任意字母、数字、下划线
+            - \W：除了字母、数字、下划线
+            - \d：任意的数字[0~9]
+            - \D：除了数字[^0~9]
+            - \s：空格
+            - \S：除了空格
+            - \b：单词边界
+            - \B：除了单词边界
+         */
+        reg = /\w/;
+        console.log(reg.test("abc"));
+
+        reg = /\W/;
+        console.log(reg.test("%%%"));
+
+        reg = /\bchild\b/;
+        console.log(reg.test("Hello children"));
+
+
+        // 接受一个用户输入
+        var str = "         ad   min      ";
+        console.log(str);
+
+        // 去除掉字符串中前后的空格
+        // 去除空格就是使用 "" 来替换空格
+        // str = str.replace(/\s/g, "");
+
+        // 去除开头的空格
+        str = str.replace(/^\s*/, "");
+        console.log(str);
+
+        // 去除结尾的空格
+        str = str.replace(/\s*$/, "");
+        console.log(str);
+
+        // 完整正则表达式
+        str = str.replace(/^\s|\s*$/g, "");
+        console.log(str);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

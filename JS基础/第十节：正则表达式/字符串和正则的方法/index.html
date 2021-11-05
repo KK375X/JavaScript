@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        var str = "1a2b3c4d5e6f7";
+
+
+        /*
+            - split()：将字符串拆分成数组
+                - 方法中可以传递一个正则表达式作为参数，方法将会根据正则表达式去拆分字符串
+         */
+        var result = str.split("c");
+        console.log(result);
+
+        // 根据任意字母将字符串拆分
+        result = str.split(/[A-z]/);
+        console.log(result);
+
+
+        /*
+            - search()：搜索字符串中是否含有指定内容
+                - 搜索到指定内容，返回第一次出现的索引，反之返回-1
+                - 它可以接受一个正则表达式作为参数，根据正则表达式检索字符串
+                - 只会查找第一个，即使设置全局匹配也没用
+         */
+        str = "Hello abc Hello aec afc adc";
+        result = str.search("abc");
+        console.log(result);
+
+        // 搜索字符串中是否含有abc或aec或afc或adc
+        result = str.search(/a[befd]c/);
+        console.log(result);
+
+
+        /*
+            - match()：根据正则表达式将符合条件的内容提取出来
+                - 默认情况下match()只会找到第一个符合要求的内容
+                - 可以设置正则表达式为全局匹配模式进行查找
+                - match()会将匹配到的内容封装到一个数组中返回
+         */
+        str = "1a2b3c4d5e6f7";
+        result = str.match(/[A-z]/gi);       // 全局匹配和忽略大小写两种匹配模式
+        console.log(result);
+
+
+        /*
+            - replace()：将字符串中指定内容替换为新的内容
+                - 参数：
+                    - 第一个字符串：被替换的内容，可以接受一个正则表达式作为参数
+                    - 第二个字符串：新的内容
+                - 默认只会替换第一个检索到的需要替换的字符串
+         */
+        result = str.replace(/[a-z]/gi, "@_@");
+        console.log(result);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

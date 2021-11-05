@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text</title>
+
+    <script type="text/javascript">
+        /*
+            - prompt()函数：
+                - 作用：弹出一个文本框，用户可以输入字符串类型的数据，该字符串会作为提示框的提示文字
+
+                - 返回值类型：String类型，所以要在前面加个 + 号进行类型转换
+
+                - 语法：var str = prompt("xxx");
+        */
+
+        /*
+            - 题目一：
+                从键盘输入小明的期末成绩:
+                当成绩为100时，'奖励一辆BMW'
+                当成绩为[80-99]时，奖励一台iphone15s'
+                当成绩为[60-80]时，‘奖励一本参考书'
+                其他时，什么奖励也没有
+        */
+        var score = prompt("请输入小明的期末成绩：");
+        if (score == 100) {
+            alert("奖励一辆BMW");
+        } else if (score >= 80 && score <=99) {
+            alert("奖励一台iphone15s");
+        } else if (score >= 60 && score <80) {
+            alert("奖励一本参考书")
+        } else {
+            alert("什么奖励也没有")
+        }
+
+
+        /*
+            - 题目二：
+                编写程序，由键盘输入三个整数分别存入变量num1、num2、 num3,
+                对他们进行排序，并且从小到大输出。
+         */
+        /* 加个加号进行类型转换 */
+        var num1 = +prompt("请输入num1");
+        var num2 = +prompt("请输入num2");
+        var num3 = +prompt("请输入num3");
+        var min, m, max;
+        if (num1 > num2 && num1 > num3) {
+            max = num1;
+            if (num2 > num3) {
+                m = num2;
+                min = num3;
+            } else {
+                m = num3;
+                min = num2;
+            }
+        } else if (num2 > num1 && num2 > num3) {
+            max = num2;
+            if (num1 > num3) {
+                m = num1;
+                min = num3;
+            } else {
+                m = num3;
+                min = num1;
+            }
+        } else if (num3 > num1 && num3 > num2) {
+            max = num3;
+            if (num1 > num2) {
+                m = num1;
+                min = num2;
+            } else {
+                m = num2;
+                min = num1;
+            }
+        }
+        alert("最小值为：" + min + "；其次为：" + m + "；最大值为：" + max + "。");
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

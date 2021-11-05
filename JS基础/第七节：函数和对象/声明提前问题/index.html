@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - 变量的声明提前：
+                - 使用var关键字声明的变量，会在所有代码执行之前被声明
+
+            - 函数的声明提前：
+                - 使用函数声明形式创建的函数 function() {}，它会在所有代码执行之前被创建
+                - 使用函数表达式创建的函数，不会被声明提前，所以不能在声明之前被调用
+         */
+        // 函数声明，会被提前创建
+        function fun() {
+            console.log("我是由函数声明创建的。");
+        }
+
+        // 函数表达式，不会被提前创建
+        var fun1 = function () {
+            console.log("我是由函数表达式创建的。");
+        };
+
+        // 调用函数声明创建的函数
+        fun();
+
+        // 调用函数表达式声明创建的函数
+        fun1();
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

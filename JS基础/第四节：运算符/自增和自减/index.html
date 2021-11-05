@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - 自增运算符：++
+                - 通过自增可以使变量在原来的基础上增加1
+                - 对一个变量自增以后，原变量的值会立即自增1
+                    - a++的值等于原变量的值（自增前的值）
+                    - ++a的值等于新值（自增后的值）
+
+            - 自减运算符：--
+                - 通过自减可以使变量在自身的基础上减1
+                    - a--的值等于原变量的值（自减前的值）
+                    - --a的值等于新值（自减后的值）
+         */
+        var a = 1;
+        a = a + 1;
+        console.log("a = " + a);
+
+        // 练习
+        var n1 = 10, n2 = 20;
+        var n = n1++;
+        console.log('n = ' + n);    //10
+        console.log('n1 = ' + n1);  //11
+        n = ++n1;
+        console.log('n = ' + n);    //12
+        console.log('n1 =' + n1);  //12
+        n = n2--;
+        console.log('n = ' + n);    //20
+        console.log('n2 = ' + n2); //19
+        n = --n2;
+        console.log('n = ' + n);    //18
+        console.log('n2 = ' + n2); //18
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

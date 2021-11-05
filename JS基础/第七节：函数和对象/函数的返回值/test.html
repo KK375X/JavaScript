@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - 题目一：
+                定义一个函数，判断一个数字是否是偶数，如果是返回true,否则返回false
+         */
+        function test1(number) {
+            // if (number%2 == 0) {
+            //     return true;
+            // }
+            // return false;
+            return (number % 2 == 0);
+        }
+        var number = +prompt("请输入一个数字：");
+        var result1 = test1(number);
+        alert(result1);
+
+
+        /*
+            - 题目二：
+                定义一个函数，可以根据半径计算一个圆的面积，并返回计算结果
+         */
+        function test2(r) {
+            return 3.1415926*r*r;
+        }
+        var r = +prompt("请输入一个半径值：");
+        var result2 = test2(r);
+        alert(result2);
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

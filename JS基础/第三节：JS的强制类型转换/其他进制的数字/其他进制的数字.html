@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - 在JS中，用0x开头表示16进制的数字
+                - 示例：var a = 0x10     -->    输出：16
+
+            - 在JS中，用0开头表示8进制的数字
+                - 示例：var a = 070      -->    输出：56
+
+            - 在JS中，用0b开头表示2进制的数字
+                - 示例：var a = 0b10     -->    输出：2
+                - 某些浏览器不支持，也用的很少
+         */
+
+        /*
+            - 像“070”这种字符串，有些浏览器会当成8进制解析，有的会当成10进制解析
+                - 可以在parseInt()中传递第二个参数，来指定数字的进制
+         */
+        var a = "070";
+        var b = "070";
+        a = parseInt(a, 8);
+        b = parseInt(b, 10);
+        console.log(a);
+        console.log(b);
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

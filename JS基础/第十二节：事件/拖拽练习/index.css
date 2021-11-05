@@ -1,0 +1,15 @@
+#box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+}
+
+#link{
+    width: 100px;
+    height: 100px;
+    background-color: #ff8c5d;
+    position: absolute;;
+    top: 300px;
+    left: 300px;
+}

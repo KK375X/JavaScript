@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        /*
+            - break关键字
+                - 作用：可以用来退出switch或循环语句
+
+                - 作用范围：立即终止离它最近的那个循环语句
+
+            - continue关键字
+                - 作用：可以跳过当此循环
+
+                - 作用范围：立即跳过离它最近的那个循环语句
+         */
+
+
+        /*
+            - 可以为循环语句创建一个label，来标识当前的循环
+                - 语法：label:循环语句
+
+                - 使用方法：使用break语句时，可以在break后面跟一个label，这样break将会结束指定的循环语句
+
+            outer:        //为循环语句设置label
+            for (var i=1; i<=10; i++) {
+                console.log("外层循环" + i);
+                for (var j=1; j<=10; j++) {
+                    break outer;    //直接终止指定的循环语句
+                    console.log("内层循环" + j);
+                }
+            }
+         */
+
+
+        /*
+            - 计时器：
+                - console.time("计时器的名字")：可以用来开启一个计时器
+                - console.timeEnd("计时器的名字")：可以用来终止一个计时器
+                - 在开发者模式的控制器里可以看到计时器的数值
+         */
+        console.time("text");       //开启计时器
+        for (var i=1; i<=9; i++) {
+            for (var j=1; j<=i; j++) {
+                document.write(j + "*" + i + "=" + i*j + "&nbsp&nbsp&nbsp");
+            }
+            document.write("<br/>");
+        }
+        console.timeEnd("text");    //终止计时器
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>

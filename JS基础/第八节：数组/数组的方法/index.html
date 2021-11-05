@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+
+    <script type="text/javascript">
+        // 创建一个数组
+        var arr = ["孙悟空", "猪八戒", "沙和尚"];
+
+
+        /*
+            - push()
+                - 该方法可以向数组末尾添加一个或多个元素，并返回数组长度
+                - 可以将要添加的元素作为方法的参数传递，会自动添加到末尾
+         */
+        var result = arr.push("唐僧", "白龙马");
+        console.log(arr);
+        console.log("数组的长度为：" + result);
+
+
+        /*
+            - pop()
+                - 该方法可以删除数组的最后一个元素，并将被删除的元素作为返回值返回
+         */
+        result = arr.pop();
+        console.log(arr);
+        console.log("被删除的元素为：" + result);
+
+
+        /*
+            - unshift()
+                - 向数组的开头添加一个或多个元素，并返回新数组的长度
+                - 向前面插入元素之后，原先元素的索引会依次后移
+         */
+        result = arr.unshift("如来佛祖", "玉皇大帝");
+        console.log(arr);
+        console.log("数组的长度为：" + result);
+
+
+        /*
+            - shift()
+                - 可以删除数组的第一个元素，被删除的元素当作返回值返回
+         */
+        result = arr.shift();
+        console.log(arr);
+        console.log("被删除的元素为：" + result);
+
+    </script>
+
+</head>
+<body>
+
+</body>
+</html>
